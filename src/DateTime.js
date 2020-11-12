@@ -113,7 +113,8 @@ export default class Datetime extends React.Component {
 		if ( this.props.renderInput ) {   
 			return (
 				<div>
-					{ this.props.renderInput( finalInputProps, this._openCalendar, this._closeCalendar ) }
+					{ this.props.renderInput( finalInputProps, this._openCalendar, this.
+					 ) }
 				</div>
 			);
 		}
@@ -415,7 +416,7 @@ export default class Datetime extends React.Component {
 	_handleClickOutside = () => {
 		let props = this.props;
 
-		if ( props.input && this.state.open && props.open === undefined && props.closeOnClickOutside ) {
+		if ( props.input && this.state.open && props.closeOnClickOutside ) {
 			this._closeCalendar();
 		}
 	}
